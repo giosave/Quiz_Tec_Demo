@@ -13,29 +13,29 @@ class QuestionHomeState extends State<QuestionHome>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("app_tec"),
+        title: Text("Aplicacion Estres ITM"),
         backgroundColor: Colors.blue,
-    ),
-    body: Container(
-      margin: const EdgeInsets.all(15.0),
-        child: Column(  
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          MaterialButton(
-            height: 50.0,
-            color: Colors.green,
-            onPressed: startQuiz,
-            child: Text("Cuestionario",
-              style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.white
-              ),
-            )
-          )
-        ],
       ),
-    ),
+      body: Container(
+        margin: const EdgeInsets.all(15.0),
+          child: Column(  
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            MaterialButton(
+              height: 50.0,
+              color: Colors.green,
+              onPressed: startQuiz,
+              child: Text("Cuestionario",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.white
+                ),
+              )
+            )
+          ],
+        ),
+      ),
   );
 }
 

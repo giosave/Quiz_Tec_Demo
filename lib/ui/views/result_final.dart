@@ -16,7 +16,7 @@ class ResultFinal extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Final Score: $score",
+              Text("Resultado final: $score",
                 style: TextStyle(
                     fontSize: 35.0
                 ),),
@@ -28,8 +28,8 @@ class ResultFinal extends StatelessWidget{
                   finalScore = 0;
                   Navigator.pop(context);
                 },
-                child: Text("Reset Quiz",
-                  style:  TextStyle(
+                child: Text("Regresar Inicio",
+                  style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.white
                   ),),)

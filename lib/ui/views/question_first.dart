@@ -17,11 +17,11 @@ class QuestionFirst extends StatefulWidget{
 class QuestionFirstState extends State<QuestionFirst> {
   @override
   Widget build(BuildContext context) {
-    print(questionNumber);//inicia en 1
-    print(quiz.cuestionario.length);
-    //if(quiz.choices[questionNumber][0] == quiz.correctAnswers[questionNumber])
-    print("choices questions ${quiz.choices[questionNumber][0]}");
-    print("quiz correct answers ${quiz.correctAnswers[questionNumber]}");
+    //print(questionNumber);//inicia en 1
+    //print(quiz.cuestionario.length);
+    ////if(quiz.choices[questionNumber][0] == quiz.correctAnswers[questionNumber])
+    //print("choices questions ${quiz.choices[questionNumber][0]}");
+    //print("quiz correct answers ${quiz.correctAnswers[questionNumber]}");
     return WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
@@ -36,11 +36,11 @@ class QuestionFirstState extends State<QuestionFirst> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text("Prregunta ${questionNumber + 1} of ${quiz.cuestionario.length}",
+                      Text("Pregunta ${questionNumber + 1} of ${quiz.cuestionario.length}",
                         style: TextStyle(
                             fontSize: 22.0
                         ),),
-                      Text("Score: $finalScore",
+                      Text("Puntos: $finalScore",
                         style: TextStyle(
                             fontSize: 22.0
                         ),)
