@@ -1,16 +1,12 @@
-# quiz_tec_demo
+# Aplicacion Cuestionario Estres
 
-A new Flutter project.
+ Aplicacion para el manejo del estres, enfocada para los alumnos del Instituto Tecnologio de Mexicali
 
-## Getting Started
+## Referencias utilizadas para realizar los cuestionarios
 
-This project is a starting point for a Flutter application.
+- [El inventario SISCO del Estrés Académico](https://www.researchgate.net/publication/28175062_El_Inventario_SISCO_del_Estres_Academicob)
+- [Test del estrés (SlideShare)](https://es.slideshare.net/eyicoz/test-del-estrs)
+- [Test de Estres Laboral](http://drberrezueta.com/wp_berrezueta/wp-content/uploads/2016/04/TEST-DE-ESTRES-LABORAL.pdf)
+- [Escala para Medir el Estrés academico](https://es.scribd.com/doc/246374230/Encuesta-para-medir-el-estres-academico)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Dejar comentario u opiniones al respecto
