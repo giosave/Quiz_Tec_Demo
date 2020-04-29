@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+
 import 'package:quiz_tec_demo/ui/views/question_first.dart';
-
-
 
 class ResultFinal extends StatelessWidget{
   final int score;
@@ -25,7 +24,7 @@ class ResultFinal extends StatelessWidget{
                 color: Colors.red,
                 onPressed: (){
                   questionNumber = 0;
-                  finalScore = 0;
+                  finalSummation = 0;
                   Navigator.pop(context);
                 },
                 child: Text("Regresar Inicio",
