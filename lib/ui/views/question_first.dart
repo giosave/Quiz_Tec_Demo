@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:quiz_tec_demo/question_list.dart';
-import 'package:quiz_tec_demo/result_final.dart';
+import 'package:quiz_tec_demo/ui/views/result_final.dart';
+import 'package:quiz_tec_demo/ui/widgets/question_list.dart';
 
 var finalScore = 0;
 var questionNumber = 0;
