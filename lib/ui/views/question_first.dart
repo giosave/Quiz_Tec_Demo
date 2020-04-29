@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 
 import 'package:quiz_tec_demo/ui/views/result_final.dart';
 import 'package:quiz_tec_demo/ui/widgets/question_list.dart';
@@ -21,6 +22,8 @@ class QuestionFirstState extends State<QuestionFirst> {
     return WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
+          appBar: AppBar(
+          ),
           body: Container(
             margin: const EdgeInsets.all(10.0),
             alignment: Alignment.topCenter,
@@ -63,13 +66,6 @@ class QuestionFirstState extends State<QuestionFirst> {
                       color: Colors.blueGrey,
                       onPressed: (){
                         finalSummation+=1;
-                        //print(quiz.choices[questionNumber][0]);
-                        //if(quiz.choices[questionNumber][0] == quiz.correctAnswers[questionNumber]){
-                        //  debugPrint("Correct");
-                        //  finalScore++;
-                        //}else{
-                        //  debugPrint("Wrong");
-                        //}
                         updateSummation();
                       },
                       child: Text("1",
@@ -84,12 +80,6 @@ class QuestionFirstState extends State<QuestionFirst> {
                       color: Colors.blueGrey,
                       onPressed: (){
                         finalSummation+=2;
-                        //if(quiz.choices[questionNumber][1] == quiz.correctAnswers[questionNumber]){
-                        //  debugPrint("Correct");
-                        //  finalScore++;
-                        //}else{
-                        //  debugPrint("Wrong");
-                        //}
                         updateSummation();
                       },
                       child: Text("2",
@@ -104,12 +94,6 @@ class QuestionFirstState extends State<QuestionFirst> {
                       color: Colors.blueGrey,
                       onPressed: (){
                         finalSummation+=3;
-                        //if(quiz.choices[questionNumber][1] == quiz.correctAnswers[questionNumber]){
-                        //  debugPrint("Correct");
-                        //  finalScore++;
-                        //}else{
-                        //  debugPrint("Wrong");
-                        //}
                         updateSummation();
                       },
                       child: Text("3",
@@ -130,12 +114,6 @@ class QuestionFirstState extends State<QuestionFirst> {
                       color: Colors.blueGrey,
                       onPressed: (){
                         finalSummation+=4;
-                        //if(quiz.choices[questionNumber][2] == quiz.correctAnswers[questionNumber]){
-                        //  debugPrint("Correct");
-                        //  finalScore++;
-                        //}else{
-                        //  debugPrint("Wrong");
-                        //}
                         updateSummation();
                       },
                       child: Text("4",
@@ -150,12 +128,6 @@ class QuestionFirstState extends State<QuestionFirst> {
                       color: Colors.blueGrey,
                       onPressed: (){
                         finalSummation+=5;
-                        //if(quiz.choices[questionNumber][3] == quiz.correctAnswers[questionNumber]){
-                        //  debugPrint("Correct");
-                        //  finalScore++;
-                        //}else{
-                        //  debugPrint("Wrong");
-                        //}
                         updateSummation();
                       },
                       child: Text("5",
