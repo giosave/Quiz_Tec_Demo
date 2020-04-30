@@ -1,7 +1,4 @@
-class QuestionList{
-  var images = [
-    "alligator", "cat", "dog", "owl","alligator", "cat", "dog", "owl","alligator", "cat", "dog", "owl","alligator", "cat", "dog", "owl", "owl", "owl", "owl", "owl", "owl", "owl"//22
-  ];
+class QuestionList {
 
   var cuestionario = [
     "Realización de exámenes",
@@ -259,44 +256,5 @@ class QuestionList{
       'opt5': 5,
       'extra': 15
     },
-    ];
-
-  //var questions = [
-  //  "This animal is a carnivorous reptile.",
-  //  "_________ like to chase mice and birds.",
-  //  "Give a _________ a bone and he will find his way home",
-  //  "A nocturnal animal with some really big eyes",
-  //];
-
-
-  var choices = [
-    ["1", "2", "3", "4"],
-    ["1", "2", "3", "4"],
-    ["1", "2", "3", "4"],
-    ["1", "2", "3", "4"],
-    ["Cat", "Snail", "Slug", "Horse"],
-    ["Mouse", "Dog", "Elephant", "Donkey"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-    ["Cat", "Sheep", "Alligator", "Cow"],
-    ["Cat", "Snail", "Slug", "Horse"],
-    ["Mouse", "Dog", "Elephant", "Donkey"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-    ["Cat", "Sheep", "Alligator", "Cow"],
-    ["Cat", "Snail", "Slug", "Horse"],
-    ["Mouse", "Dog", "Elephant", "Donkey"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-    ["Cat", "Sheep", "Alligator", "Cow"],
-    ["Cat", "Snail", "Slug", "Horse"],
-    ["Mouse", "Dog", "Elephant", "Donkey"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-    ["Spider", "Snake", "Hawk", "Owl"],
-  ];
-
-  var correctAnswers = [
-    "1", "2", "3", "4", "1", "2", "3", "4", 
-        "Alligator", "Cat", "Dog", "Owl",    "Alligator", "Cat", "Dog", "Owl",
-            "Alligator", "Cat", "Dog", "Owl", "Dog", "Owl"
   ];
 }
