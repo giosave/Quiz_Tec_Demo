@@ -29,34 +29,13 @@ class QuestionFirstState extends State<QuestionFirst> {
             alignment: Alignment.topCenter,
             child: Column(
               children: <Widget>[
-                Padding(padding: EdgeInsets.all(20.0)),
-                Container(
-                  alignment: Alignment.centerRight,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("Pregunta ${questionNumber + 1} of ${quiz.cuestionario.length}",
-                        style: TextStyle(
-                            fontSize: 22.0
-                        ),),
-                      Text("Puntos: $finalSummation",
-                        style: TextStyle(
-                            fontSize: 22.0
-                        ),)
-                    ],
-                  ),
-                ),
-                //image
-                Padding(padding: EdgeInsets.all(10.0)),
-                Image.asset(
-                  "images/${quiz.images[questionNumber]}.jpg",
-                ),
                 Padding(padding: EdgeInsets.all(10.0)),
                 Text(quiz.cuestionario[questionNumber],
                   style: TextStyle(
                     fontSize: 20.0,
-                  ),),
-                Padding(padding: EdgeInsets.all(10.0)),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.all(20.0)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -179,3 +158,25 @@ class QuestionFirstState extends State<QuestionFirst> {
     });
   }
 }
+
+
+/*
+PREGUNTA Y  RESULTADO
+  Padding(padding: EdgeInsets.all(20.0)),
+  Container(
+    alignment: Alignment.centerRight,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Text("Pregunta ${questionNumber + 1} of ${quiz.cuestionario.length}",
+          style: TextStyle(
+              fontSize: 22.0
+          ),),
+        Text("Puntos: $finalSummation",
+          style: TextStyle(
+              fontSize: 22.0
+          ),)
+      ],
+    ),
+  ),
+ */
