@@ -9,6 +9,17 @@ class ResultFinal extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+
+    metodo() {
+      if (score< 39){
+        return label("Nivel de estrés bajo");
+      } else if (score<=79){
+        return label("Nivel de estrés moderado");
+      } else {
+        return label("Nivel de estrés alto");
+      }
+    }
+
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
@@ -19,6 +30,7 @@ class ResultFinal extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              metodo(),
               Text("Resultado final: $score",
                 style: TextStyle(
                     fontSize: 35.0
