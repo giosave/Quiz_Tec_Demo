@@ -9,8 +9,8 @@ void main() {
     MaterialApp(
       home: SplashScreenView(),
       //initialRoute: RoutePaths.Home,
-      title: 'fLUTTER DEMO',
-      initialRoute: RoutePaths.Splas,
+      title: 'Flutter Demo',
+      initialRoute: RoutePaths.Splash,
       onGenerateRoute: Router.generateRoute,
     )
   );

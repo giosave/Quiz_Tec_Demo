@@ -12,7 +12,7 @@ class Router {
     switch (settings.name) {
       case RoutePaths.Home:
         return MaterialPageRoute(builder: (_) => HomeView());
-      case RoutePaths.Splas:
+      case RoutePaths.Splash:
         return MaterialPageRoute(builder: (_) => SplashScreenView());
       //case RoutePaths.Probando:
       //  return MaterialPageRoute(builder: (_) => Probando());
