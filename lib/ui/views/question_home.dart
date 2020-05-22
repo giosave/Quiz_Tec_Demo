@@ -49,43 +49,48 @@ class QuestionHomeState extends State<QuestionHome>{
       ),
   );
 }
+
 Widget _createHeader() {
   return DrawerHeader(
       margin: EdgeInsets.zero,
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
         image: DecorationImage(
-            fit: BoxFit.fill,
-            image:  AssetImage('assets/tec.png'))),
+          fit: BoxFit.fill,
+          image:  AssetImage('assets/itm.png')
+        )
+      ),
       child: Stack(children: <Widget>[
         Positioned(
-            bottom: 12.0,
-            left: 16.0,
-            child: Text("ITMexicali",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w500))),
+          bottom: 12.0,
+          left: 16.0,
+          child: Text("ITMexicali",
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w500)
+          )
+        ),
       ]
     )
   );
 }
 
-Widget _createDrawerItem(
-    {IconData icon, String text, GestureTapCallback onTap}) {
-  return ListTile(
-    title: Row(
-      children: <Widget>[
-        Icon(icon),
-        Padding(
-          padding: EdgeInsets.only(left: 8.0),
-          child: Text(text),
-        )
-      ],
-    ),
-    onTap: onTap,
-  );
-}
+  Widget _createDrawerItem({IconData icon, String text, GestureTapCallback onTap}) {
+    return ListTile(
+      title: Row(
+        children: <Widget>[
+          Icon(icon),
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text(text),
+          )
+        ],
+      ),
+      onTap: onTap,
+    );
+  }
+
   void startQuiz() {
     setState(() {
     Navigator.push(context, new MaterialPageRoute(builder: (context)=> QuestionFirst()));
