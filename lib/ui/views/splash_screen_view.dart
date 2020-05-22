@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:quiz_tec_demo/ui/views/question_home.dart';
+import 'package:quiz_tec_demo/ui/views/home_view.dart';
 
 class SplashScreenView extends StatefulWidget {
   @override
@@ -16,7 +16,8 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     Timer(
       Duration(seconds: 1),
       () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (BuildContext context) => QuestionHome()))
+        builder: (BuildContext context) => HomeView())
+      )
     );
   }
 
