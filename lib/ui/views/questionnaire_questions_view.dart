@@ -40,82 +40,37 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    //button 1
-                    MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-                        finalSummation+=1;
-                        updateSummation();
-                      },
-                      child: Text("1",
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
-                    ),
+                    button("1", () {//button 1 en widget
+                      finalSummation+=1;
+                      updateSummation();
+                    }),
+                    button("2", (){
+                      finalSummation+=2;
+                      updateSummation();
+                    }),
+                    button("3", (){
+                      finalSummation+=3;
+                      updateSummation();
+                    }),
                     //button 2
-                    MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-                        finalSummation+=2;
-                        updateSummation();
-                      },
-                      child: Text("22",
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
-                    ),
                     //button 5
-                    MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-                        finalSummation+=3;
-                        updateSummation();
-                      },
-                      child: Text("3",
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
-                    ),
                   ],
                 ),
-                Padding(padding: EdgeInsets.all(10.0)),
+                Padding(
+                  padding: EdgeInsets.all(10.0)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     //button 3
-                    MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-                        finalSummation+=4;
-                        updateSummation();
-                      },
-                      child: Text("4",
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
-                    ),
+                    button("4", () {
+                      finalSummation+=4;
+                      updateSummation();
+                    }),
+                    button("5", (){
+                      finalSummation+=5;
+                      updateSummation();
+                    })
                     //button 4
-                    MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-                        finalSummation+=5;
-                        updateSummation();
-                      },
-                      child: Text("5",
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
-                    ),
                   ],
                 ),
                 Padding(padding: EdgeInsets.all(15.0)),
@@ -136,6 +91,20 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
               ],
             ),
           ),
+    );
+  }
+
+  Widget button(String text, GestureTapCallback onTap) {
+    return MaterialButton(
+      minWidth: 120.0,
+      color: Colors.blueGrey,
+      onPressed: onTap,
+      child: Text(text,
+        style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.white
+        ),
+      ),
     );
   }
 
