@@ -9,7 +9,7 @@ class QuestionHome extends StatefulWidget{
   }
 }
 
-class QuestionHomeState extends State<QuestionHome>{
+class QuestionHomeState extends State<QuestionHome>{//YA NO SE USA
   @override
   Widget build(BuildContext context) {
     return Scaffold(
