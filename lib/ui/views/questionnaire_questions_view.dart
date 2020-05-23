@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/core/constants/app_constants.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
-import 'package:quiz_tec_demo/ui/views/result_final.dart';
+import 'package:quiz_tec_demo/ui/views/result_final_view.dart';
 import 'package:quiz_tec_demo/ui/widgets/question_list.dart';
 
   var finalSummation = 0;
@@ -150,7 +150,7 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
   void updateSummation(){
     setState(() {
       if(questionNumber == quiz.cuestionario.length - 1){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> ResultFinal(score: finalSummation,)));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> ResultFinalView(score: finalSummation,)));
 
       }else{
         questionNumber++;

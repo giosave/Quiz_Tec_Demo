@@ -4,9 +4,9 @@ import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 import 'package:quiz_tec_demo/ui/views/question_first.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire_questions_view.dart';
 
-class ResultFinal extends StatelessWidget{
+class ResultFinalView extends StatelessWidget{
   final int score;
-  ResultFinal({Key key, @required this.score}) : super(key: key);
+  ResultFinalView({Key key, @required this.score}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +22,10 @@ class ResultFinal extends StatelessWidget{
     }
 
     return WillPopScope(
-      onWillPop: () async => false,
+      //onWillPop: () async => false,
       child: Scaffold(
         appBar: AppBar(
-          title: label("text"),
+          title: Text("Leer ideas"),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.home), 
@@ -47,8 +47,9 @@ class ResultFinal extends StatelessWidget{
               resultFinal(),
               Text("Resultado final: $score",
                 style: TextStyle(
-                    fontSize: 35.0
-                ),),
+                  fontSize: 35.0
+                ),
+              ),
               Padding(padding: EdgeInsets.all(30.0)),
               MaterialButton(
                 color: Colors.red,
@@ -59,9 +60,11 @@ class ResultFinal extends StatelessWidget{
                 },
                 child: Text("Regresar Inicio",
                   style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white
-                  ),),)
+                    fontSize: 20.0,
+                    color: Colors.white
+                  ),
+                ),
+              )
             ],
           ),
         ),
