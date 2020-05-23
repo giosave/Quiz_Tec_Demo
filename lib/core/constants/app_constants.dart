@@ -13,5 +13,6 @@ const PRIMARY_COLOR = Color.fromRGBO(33, 150, 243, 1.0);
 const DEFAULT_TEXT_COLOR = Color.fromRGBO(33, 33, 33, 1.0);
 //PAGES
 const String PAGE_HOME = "Aplicacion Inicio";
+const String PAGE_QUESTIONNAIRE = 'Cuestionario';
 //PROFILE
 const PROFILE_ADMIN = 'Administrador';
