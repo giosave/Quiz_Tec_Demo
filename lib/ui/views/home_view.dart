@@ -5,7 +5,7 @@ import 'package:quiz_tec_demo/core/constants/app_constants.dart';
 import 'package:quiz_tec_demo/ui/shared/ui_helpers.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 import 'package:quiz_tec_demo/ui/views/question_home.dart';
-import 'package:quiz_tec_demo/ui/views/questionnaire.dart';
+import 'package:quiz_tec_demo/ui/views/questionnaire_view.dart';
 import 'package:quiz_tec_demo/ui/widgets/drawer_menu_item_widget.dart';
 class HomeView extends StatefulWidget {
   @override
@@ -22,7 +22,7 @@ class _HomeViewState extends State<HomeView> {
       case 0:
         return _buildContentScreen(PAGE_HOME, null);
       case 1:
-        return _buildContentScreen(PAGE_QUESTIONNAIRE, Questionnaire());
+        return _buildContentScreen(PAGE_QUESTIONNAIRE, QuestionnaireView());
       case 2:
         return _buildContentScreen("heading", HomeView());
       case 3:

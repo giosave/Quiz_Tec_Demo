@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 import 'package:quiz_tec_demo/ui/views/question_first.dart';
 
-class Questionnaire extends StatefulWidget {
+class QuestionnaireView extends StatefulWidget {
   @override
-  _QuestionnaireState createState() => _QuestionnaireState();
+  _QuestionnaireViewState createState() => _QuestionnaireViewState();
 }
 
-class _QuestionnaireState extends State<Questionnaire> {
+class _QuestionnaireViewState extends State<QuestionnaireView> {
   @override
   Widget build(BuildContext context) {
     return buildContainer(
