@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/core/constants/app_route_constants.dart';
 import 'package:quiz_tec_demo/ui/views/home_view.dart';
-import 'package:quiz_tec_demo/ui/views/question_home.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire_questions_view.dart';
 import 'package:quiz_tec_demo/ui/views/splash_screen_view.dart';
 

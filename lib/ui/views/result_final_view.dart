@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
-import 'package:quiz_tec_demo/ui/views/question_first.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire_questions_view.dart';
 
 class ResultFinalView extends StatelessWidget{
