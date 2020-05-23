@@ -14,20 +14,27 @@ final List<Map<String, dynamic>> groups = [
         'role': [],
         'index': 0
       },
-      //{
-      //  'title': PAGE_HOME,
-      //  'icon': FontAwesomeIcons.archive,
-      //  'routeName': RoutePaths.Probando222,
-      //  'role': [],
-      //  'index': 1
-      //},
-      //{
-      //  'title': PAGE_HOME,
-      //  'icon': FontAwesomeIcons.archive,
-      //  'routeName': RoutePaths.Probando,
-      //  'role': [],
-      //  'index': 2
-      //}
+      {
+        'title': PAGE_HOME,
+        'icon': FontAwesomeIcons.archive,
+        'routeName': RoutePaths.Probando222,
+        'role': [],
+        'index': 1
+      },
+      {
+        'title': PAGE_HOME,
+        'icon': FontAwesomeIcons.archive,
+        'routeName': RoutePaths.Probando,
+        'role': [],
+        'index': 2
+      },
+      {
+        'title': PAGE_QUESTIONNAIRE,
+        'icon': Icons.book,
+        'routeName': RoutePaths.Questionnaire,
+        'role': [],
+        'index': 3
+      }
     ],
     'role': [
       PROFILE_ADMIN
