@@ -47,20 +47,6 @@ class ResultFinalView extends StatelessWidget{
               ),
             ),
             Padding(padding: EdgeInsets.all(30.0)),
-            MaterialButton(
-              color: Colors.red,
-              onPressed: (){
-                questionNumber = 0;
-                finalSummation = 0;
-                Navigator.pop(context);
-              },
-              child: Text("Regresar Inicio",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white
-                ),
-              ),
-            )
           ],
         ),
       ),

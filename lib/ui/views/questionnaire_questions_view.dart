@@ -68,22 +68,6 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                 //button 4
               ],
             ),
-            Padding(padding: EdgeInsets.all(15.0)),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: MaterialButton(
-                minWidth: 240.0,
-                height: 30.0,
-                color: Colors.red,
-                onPressed: resetQuiz,
-                child: Text("Inicio",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Colors.white
-                  ),
-                )
-              )
-            ),
           ],
         ),
       ),
