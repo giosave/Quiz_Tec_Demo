@@ -6,6 +6,7 @@ import 'package:quiz_tec_demo/core/constants/probando.dart';
 import 'package:quiz_tec_demo/ui/shared/ui_helpers.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 import 'package:quiz_tec_demo/ui/views/question_home.dart';
+import 'package:quiz_tec_demo/ui/views/ultima.dart';
 import 'package:quiz_tec_demo/ui/widgets/drawer_menu_item_widget.dart';
 class HomeView extends StatefulWidget {
   @override
@@ -20,9 +21,15 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     switch(_selectedIndex) {
       case 0:
-      return _buildContentScreen("heading", Probando());
+        return _buildContentScreen("heading", Probando());
+      case 1:
+        return _buildContentScreen("heading", Probando222());
       case 2:
-      return _buildContentScreen("heading", Probando222());
+        return _buildContentScreen("heading", HomeView());
+      case 3:
+        return _buildContentScreen("heading", HomeView());
+      case 4:
+        return _buildContentScreen("sadasd", QuestionHome());
     }
     return Container();
   }
@@ -33,7 +40,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: AppBar(
         actions: <Widget>[
           IconButton(icon: 
-          Icon(Icons.archive), onPressed: (){})
+          Icon(Icons.home), onPressed: (){})
         ],
       ),
       body: content,
@@ -44,20 +51,27 @@ class _HomeViewState extends State<HomeView> {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          _user('gio','gio@gmail.com',AssetImage('src/images/profile.png'),AssetImage('src/images/solo.png')),
+          _user('Tecnológico Nacional De México','ITMexicali',AssetImage('src/images/profile.png'),AssetImage('src/images/solo.png')),
           Wrap(
             children: <Widget>[
               DrawerMenuItemWidget(
+                title:"NUEVO MUNDO",
+                icon: Icons.home,
+                index: 4,
+                selectedIndex:_selectedIndex,// _selectedIndex
+                onChangeMenu: onChangeMenu//onChangeMenu
+              ),
+              DrawerMenuItemWidget(
                 title:"Inicio",
                 icon: Icons.home,
-                index: 1,
+                index: 0,
                 selectedIndex:_selectedIndex,// _selectedIndex
                 onChangeMenu: onChangeMenu//onChangeMenu
               ),
               DrawerMenuItemWidget(
                 title:"Cuestionarios",
                 icon: Icons.book,
-                index: 2,
+                index: 1,
                 selectedIndex:_selectedIndex,// _selectedIndex
                 onChangeMenu: onChangeMenu//onChangeMenu
               ),
