@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/core/constants/app_constants.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
+import 'package:quiz_tec_demo/ui/views/result_final.dart';
+import 'package:quiz_tec_demo/ui/widgets/question_list.dart';
+
+  var finalSummation = 0;
+var questionNumber = 0;
+var quiz = QuestionList();
+
 class QuestionnaireQuestionsView extends StatefulWidget {
   @override
   _QuestionnaireQuestionsViewState createState() => _QuestionnaireQuestionsViewState();
 }
-//YA NO SE USA
+
 class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +31,7 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
             child: Column(
               children: <Widget>[
                 Padding(padding: EdgeInsets.all(10.0)),
-                Text("quiz.cuestionario[questionNumber]",
+                Text(quiz.cuestionario[questionNumber],
                   style: TextStyle(
                     fontSize: 20.0,
                   ),
@@ -36,8 +45,8 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                       minWidth: 120.0,
                       color: Colors.blueGrey,
                       onPressed: (){
-                        //finalSummation+=1;
-                        //updateSummation();
+                        finalSummation+=1;
+                        updateSummation();
                       },
                       child: Text("1",
                         style: TextStyle(
@@ -50,10 +59,10 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                       minWidth: 120.0,
                       color: Colors.blueGrey,
                       onPressed: (){
-                        //finalSummation+=2;
-                        //updateSummation();
+                        finalSummation+=2;
+                        updateSummation();
                       },
-                      child: Text("2",
+                      child: Text("22",
                         style: TextStyle(
                             fontSize: 20.0,
                             color: Colors.white
@@ -64,8 +73,8 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                       minWidth: 120.0,
                       color: Colors.blueGrey,
                       onPressed: (){
-                        ///finalSummation+=3;
-                        //u//pdateSummation();
+                        finalSummation+=3;
+                        updateSummation();
                       },
                       child: Text("3",
                         style: TextStyle(
@@ -84,8 +93,8 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                       minWidth: 120.0,
                       color: Colors.blueGrey,
                       onPressed: (){
-                        //finalSummation+=4;
-                        //updateSummation();
+                        finalSummation+=4;
+                        updateSummation();
                       },
                       child: Text("4",
                         style: TextStyle(
@@ -98,8 +107,8 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                       minWidth: 120.0,
                       color: Colors.blueGrey,
                       onPressed: (){
-                        //finalSummation+=5;
-                        //updateSummation();
+                        finalSummation+=5;
+                        updateSummation();
                       },
                       child: Text("5",
                         style: TextStyle(
@@ -116,7 +125,7 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                       minWidth: 240.0,
                       height: 30.0,
                       color: Colors.red,
-                      //onPressed: resetQuiz,
+                      onPressed: resetQuiz,
                       child: Text("Inicio",
                         style: TextStyle(
                             fontSize: 18.0,
@@ -128,5 +137,24 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
             ),
           ),
     );
+  }
+
+  void resetQuiz(){
+    setState(() {
+      Navigator.pop(context);
+      finalSummation = 0;
+      questionNumber = 0;
+    });
+  }
+
+  void updateSummation(){
+    setState(() {
+      if(questionNumber == quiz.cuestionario.length - 1){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> ResultFinal(score: finalSummation,)));
+
+      }else{
+        questionNumber++;
+      }
+    });
   }
 }
