@@ -9,7 +9,6 @@ class ResultFinalView extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-//YA NO SE USA
     resultFinal() {
       if (score< 39){
         return label("Nivel de estrés bajo");
@@ -20,52 +19,49 @@ class ResultFinalView extends StatelessWidget{
       }
     }
 
-    return WillPopScope(
-      //onWillPop: () async => false,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("Leer ideas"),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.home), 
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Leer ideas"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home), 
+            onPressed: (){
+              questionNumber = 0;
+              finalSummation = 0;
+              Navigator.pushNamed(
+                context, 
+                'home'
+              );
+            }
+          )
+        ],
+      ),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            resultFinal(),
+            Text("Resultado final: $score",
+              style: TextStyle(
+                fontSize: 35.0
+              ),
+            ),
+            Padding(padding: EdgeInsets.all(30.0)),
+            MaterialButton(
+              color: Colors.red,
               onPressed: (){
                 questionNumber = 0;
                 finalSummation = 0;
-                Navigator.pushNamed(
-                  context, 
-                  'home'
-                );
-              }
-            )
-          ],
-        ),
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              resultFinal(),
-              Text("Resultado final: $score",
+                Navigator.pop(context);
+              },
+              child: Text("Regresar Inicio",
                 style: TextStyle(
-                  fontSize: 35.0
+                  fontSize: 20.0,
+                  color: Colors.white
                 ),
               ),
-              Padding(padding: EdgeInsets.all(30.0)),
-              MaterialButton(
-                color: Colors.red,
-                onPressed: (){
-                  questionNumber = 0;
-                  finalSummation = 0;
-                  Navigator.pop(context);
-                },
-                child: Text("Regresar Inicio",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.white
-                  ),
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
