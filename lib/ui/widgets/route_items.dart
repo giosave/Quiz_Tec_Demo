@@ -17,14 +17,14 @@ final List<Map<String, dynamic>> groups = [
       {
         'title': PAGE_HOME,
         'icon': FontAwesomeIcons.archive,
-        'routeName': RoutePaths.Probando222,
+        'routeName': '',
         'role': [],
         'index': 1
       },
       {
         'title': PAGE_HOME,
         'icon': FontAwesomeIcons.archive,
-        'routeName': RoutePaths.Probando,
+        'routeName': '',
         'role': [],
         'index': 2
       },
