@@ -34,7 +34,10 @@ class _QuestionnaireViewState extends State<QuestionnaireView> {
 
   void startQuiz() {
     setState(() {
-    Navigator.push(context, new MaterialPageRoute(builder: (context)=> QuestionFirst()));
+    Navigator.pushNamed(
+      context, 
+      'questionnaire_questions'
+    );
     });
   }
 }
