@@ -14,10 +14,10 @@ class Router {
         return MaterialPageRoute(builder: (_) => HomeView());
       case RoutePaths.Splash:
         return MaterialPageRoute(builder: (_) => SplashScreenView());
-      //case RoutePaths.Probando:
-      //  return MaterialPageRoute(builder: (_) => Probando());
-      //case RoutePaths.Probando222:
-      //  return MaterialPageRoute(builder: (_) => Probando222());
+      case RoutePaths.Probando:
+        return MaterialPageRoute(builder: (_) => Probando());
+      case RoutePaths.Probando222:
+        return MaterialPageRoute(builder: (_) => Probando222());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
