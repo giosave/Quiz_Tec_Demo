@@ -3,4 +3,5 @@ class RoutePaths {
   static const String Questionnaire ='questionnaire';
   static const String QuestionResult = 'question_result';
   static const String Splash = 'splash';
+  static const String QuestionnaireQuestions = 'questionnaire_questions';
 }
