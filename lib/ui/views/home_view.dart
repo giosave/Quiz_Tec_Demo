@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/core/constants/app_constants.dart';
 import 'package:quiz_tec_demo/ui/shared/ui_helpers.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
+import 'package:quiz_tec_demo/ui/views/contact_view.dart';
+import 'package:quiz_tec_demo/ui/views/information_view.dart';
 import 'package:quiz_tec_demo/ui/views/question_home.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire_view.dart';
 import 'package:quiz_tec_demo/ui/widgets/drawer_menu_item_widget.dart';
@@ -24,9 +26,9 @@ class _HomeViewState extends State<HomeView> {
       case 1:
         return _buildContentScreen(PAGE_QUESTIONNAIRE, QuestionnaireView());
       case 2:
-        return _buildContentScreen("heading", HomeView());
+        return _buildContentScreen(PAGE_CONTACT, ContactView());
       case 3:
-        return _buildContentScreen("heading", HomeView());
+        return _buildContentScreen(PAGE_INFORMATION, InformationView());
       case 4:
         return _buildContentScreen("sadasd", QuestionHome());
     }
@@ -55,13 +57,6 @@ class _HomeViewState extends State<HomeView> {
           Wrap(
             children: <Widget>[
               DrawerMenuItemWidget(
-                title:"NUEVO MUNDO",
-                icon: Icons.home,
-                index: 4,
-                selectedIndex:_selectedIndex,// _selectedIndex
-                onChangeMenu: onChangeMenu//onChangeMenu
-              ),
-              DrawerMenuItemWidget(
                 title:"Inicio",
                 icon: Icons.home,
                 index: 0,
@@ -78,14 +73,14 @@ class _HomeViewState extends State<HomeView> {
               DrawerMenuItemWidget(
                 title:"Contactos",
                 icon: Icons.contacts,
-                index: 3,
+                index: 2,
                 selectedIndex:_selectedIndex,// _selectedIndex
                 onChangeMenu: onChangeMenu//onChangeMenu
               ),
               DrawerMenuItemWidget(
                 title:"Información",
                 icon: Icons.info,
-                index: 4,
+                index: 3,
                 selectedIndex:_selectedIndex,// _selectedIndex
                 onChangeMenu: onChangeMenu//onChangeMenu
               ),
