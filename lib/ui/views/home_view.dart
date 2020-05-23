@@ -2,13 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/core/constants/app_constants.dart';
-import 'package:quiz_tec_demo/core/constants/proband0222.dart';
-import 'package:quiz_tec_demo/core/constants/probando.dart';
 import 'package:quiz_tec_demo/ui/shared/ui_helpers.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 import 'package:quiz_tec_demo/ui/views/question_home.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire.dart';
-import 'package:quiz_tec_demo/ui/views/ultima.dart';
 import 'package:quiz_tec_demo/ui/widgets/drawer_menu_item_widget.dart';
 class HomeView extends StatefulWidget {
   @override
@@ -23,7 +20,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     switch(_selectedIndex) {
       case 0:
-        return _buildContentScreen(PAGE_HOME, Probando());
+        return _buildContentScreen(PAGE_HOME, null);
       case 1:
         return _buildContentScreen(PAGE_QUESTIONNAIRE, Questionnaire());
       case 2:
