@@ -11,7 +11,7 @@ class ResultFinal extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 //YA NO SE USA
-    metodo() {
+    resultFinal() {
       if (score< 39){
         return label("Nivel de estrés bajo");
       } else if (score<=79){
@@ -26,12 +26,25 @@ class ResultFinal extends StatelessWidget{
       child: Scaffold(
         appBar: AppBar(
           title: label("text"),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.home), 
+              onPressed: (){
+                questionNumber = 0;
+                finalSummation = 0;
+                Navigator.pushNamed(
+                  context, 
+                  'home'
+                );
+              }
+            )
+          ],
         ),
         body: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              metodo(),
+              resultFinal(),
               Text("Resultado final: $score",
                 style: TextStyle(
                     fontSize: 35.0
