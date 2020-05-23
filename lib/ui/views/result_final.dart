@@ -9,7 +9,7 @@ class ResultFinal extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
+//YA NO SE USA
     metodo() {
       if (score< 39){
         return label("Nivel de estrés bajo");
