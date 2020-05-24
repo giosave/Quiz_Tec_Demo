@@ -22,10 +22,12 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
       ),
       body: buildContainer(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               height: 100,
               child: Text(quiz.cuestionario[questionNumber],
+              textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
                 ),
