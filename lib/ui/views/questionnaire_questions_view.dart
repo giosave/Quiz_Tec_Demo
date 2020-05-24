@@ -20,18 +20,18 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
       appBar: AppBar(
         title: Text(PAGE_QUESTIONNAIREQUESTION),
       ),
-      body: Container(
-        margin: const EdgeInsets.all(10.0),
-        alignment: Alignment.topCenter,
+      body: buildContainer(
         child: Column(
           children: <Widget>[
-            Padding(padding: EdgeInsets.all(10.0)),
-            Text(quiz.cuestionario[questionNumber],
-              style: TextStyle(
-                fontSize: 20.0,
+            Container(
+              height: 100,
+              child: Text(quiz.cuestionario[questionNumber],
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
               ),
             ),
-            Padding(padding: EdgeInsets.all(20.0)),
+            //Padding(padding: EdgeInsets.all(20.0)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -51,8 +51,6 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
                 //button 5
               ],
             ),
-            Padding(
-              padding: EdgeInsets.all(10.0)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
