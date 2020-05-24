@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_tec_demo/core/constants/app_constants.dart';
 
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire_questions_view.dart';
@@ -10,18 +11,18 @@ class ResultFinalView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     resultFinal() {
-      if (score< 39){
-        return label("Nivel de estrés bajo");
+      if (score < 39) {
+        return textStyleRed("Nivel de estrés bajo");
       } else if (score<=79){
-        return label("Nivel de estrés moderado");
+        return textStyleRed("Nivel de estrés moderado");
       } else {
-        return label("Nivel de estrés alto");
+        return textStyleRed("Nivel de estrés alto");
       }
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Leer ideas"),
+        title: Text("Resultado"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.home), 
@@ -36,19 +37,29 @@ class ResultFinalView extends StatelessWidget{
           )
         ],
       ),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: buildContainer(
+        child: Wrap(
           children: <Widget>[
-            resultFinal(),
             Text("Resultado final: $score",
               style: TextStyle(
                 fontSize: 35.0
               ),
             ),
+            resultFinal(),
             Padding(padding: EdgeInsets.all(30.0)),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget textStyleRed(String textDescription) {
+    return Text(textDescription,
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.italic,
+        fontSize: FONT_SIZE_BIG,
+        color: Colors.red
       ),
     );
   }
