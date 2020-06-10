@@ -44,7 +44,7 @@ class _HomeViewState extends State<HomeView> {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          _user('Tecnológico Nacional De México','ITMexicali',AssetImage('src/images/profile.png'),AssetImage('src/images/solo.png')),
+          _user('Tecnológico Nacional De México','ITMexicali'),
           Wrap(
             children: <Widget>[
               DrawerMenuItemWidget(
@@ -80,31 +80,14 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget _user(String email, String usuario,AssetImage perfilPrincipal,AssetImage usuarioFondo){
-    String networkImage='https://cdn.pixabay.com/photo/2012/08/27/14/19/evening-55067_960_720.png';
+  Widget _user(String email, String usuario){
 
     return UserAccountsDrawerHeader( 
-      accountEmail: Text(email),
-      accountName: Text(usuario),
-      /*otherAccountsPictures: <Widget>[IMAGEN FONDO TRASERO
-        GestureDetector(
-          onTap: (){},
-          child:  CircleAvatar( 
-            backgroundImage: usuarioFondo,
-          ),
-        )
-      ],*/
-      /*currentAccountPicture: GestureDetector(//imagen principal circular
-        onTap: (){},
-        child: CircleAvatar(
-          backgroundImage: perfilPrincipal,
-        ),
-      ),*/
       decoration: BoxDecoration(
         image: DecorationImage(
-          fit: BoxFit.cover,
-            image: NetworkImage(networkImage),
-        ),
+            fit: BoxFit.fill,
+            image: AssetImage('assets/tec.png')
+          ),
       ),
     );
   }
