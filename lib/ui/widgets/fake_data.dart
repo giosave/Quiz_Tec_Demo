@@ -1,0 +1,47 @@
+
+  List<Map<String, dynamic>> dataContact = [{
+    'nombre': 'MEDICO ESCOLAR',
+    'direccion': 'EDIFICIO "M" MAT/VESP',
+    'numero': 6865804986,
+    'numero_externo': null,
+    'escuela': 'ITM',
+    'Horarios': null,
+    'correo': 'medicoescolar@itmexicali.edu.mx',
+  },
+  {
+    'nombre': 'Psicóloga Marisssa',
+    'direccion': 'Av. Misión de Zuni 376, Misión Santo Domingo, Mexicali, B.C.',
+    'numero': 6862016515,
+    'numero_externo': null,
+    'escuela': 'Externo',
+    'Horarios': null,
+    'correo': null
+  },
+  {
+    'nombre': 'CAPNAM',
+    'direccion': 'De La Marqueza 3299, Hacienda Dorada, 21376.Mexicali, B.C.',
+    'numero': 6868420206,
+    'numero_externo': null,
+    'escuela': 'Externo',
+    'Horarios': null,
+    'correo': null,
+  },
+  {
+    'nombre': 'Centro de Psiquiatría y Psicología Holokinética',
+    'direccion': 'Ave. Alba # 3679, Nuevo Amanecer, 21378.Mexicali, B.C.',
+    'numero': 6868420004,
+    'numero_externo': null,
+    'escuela': 'Externo',
+    'Horarios': null,
+    'correo': null,
+  },
+  {
+    'nombre': 'Centro de Atención Psicológica y Psiquiátrica',
+    'direccion': 'Ave. Argentina #279 Residencial  Hípico Plus.Mexicali, B.C.',
+    'numero': 6865548687,
+    'numero_externo': null,
+    'escuela': 'Externo',
+    'Horarios': null,
+    'correo': null,
+  },
+  ];
