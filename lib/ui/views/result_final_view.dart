@@ -40,7 +40,7 @@ class ResultFinalView extends StatelessWidget{
       body: buildContainer(
         child: Wrap(
           children: <Widget>[
-            Text("Resultado final: $score",
+            Text("Resultado Final: $score",
               style: TextStyle(
                 fontSize: 35.0
               ),

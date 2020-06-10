@@ -29,7 +29,8 @@ class _QuestionnaireQuestionsViewState extends State<QuestionnaireQuestionsView>
               child: Text(quiz.cuestionario[questionNumber],
               textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 27.0,
                 ),
               ),
             ),
