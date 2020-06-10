@@ -35,10 +35,6 @@ class _HomeViewState extends State<HomeView> {
       drawer: _buildDrawerManager(),
       appBar: AppBar(
         title: Text(heading),
-        actions: <Widget>[
-          IconButton(icon: 
-          Icon(Icons.home), onPressed: (){})
-        ],
       ),
       body: content,
     );
