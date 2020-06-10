@@ -3,10 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:quiz_tec_demo/core/constants/app_constants.dart';
 import 'package:quiz_tec_demo/ui/shared/widgets_utils.dart';
-import 'package:quiz_tec_demo/ui/views/contact_view.dart';
+import 'package:quiz_tec_demo/ui/views/home_screen_view.dart';
 import 'package:quiz_tec_demo/ui/views/information_view.dart';
 import 'package:quiz_tec_demo/ui/views/questionnaire_view.dart';
 import 'package:quiz_tec_demo/ui/widgets/drawer_menu_item_widget.dart';
+
 class HomeView extends StatefulWidget {
   @override
   _HomeViewState createState() => _HomeViewState();
@@ -20,13 +21,11 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     switch(_selectedIndex) {
       case 0:
-        return _buildContentScreen(PAGE_HOME, null);
+        return _buildContentScreen(PAGE_HOME, HomeScreenView());
       case 1:
         return _buildContentScreen(PAGE_QUESTIONNAIRE, QuestionnaireView());
       case 2:
-        return _buildContentScreen(PAGE_CONTACT, ContactView());
-      case 3:
-        return _buildContentScreen(PAGE_INFORMATION, InformationView());
+        return _buildContentScreen(PAGE_CONTACT, InformationView());
     }
     return Container();
   }
@@ -53,8 +52,8 @@ class _HomeViewState extends State<HomeView> {
           Wrap(
             children: <Widget>[
               DrawerMenuItemWidget(
-                title:"Inicio",
-                icon: Icons.home,
+                title:"Contactos",
+                icon: Icons.contacts,
                 index: 0,
                 selectedIndex:_selectedIndex,// _selectedIndex
                 onChangeMenu: onChangeMenu//onChangeMenu
@@ -67,16 +66,9 @@ class _HomeViewState extends State<HomeView> {
                 onChangeMenu: onChangeMenu//onChangeMenu
               ),
               DrawerMenuItemWidget(
-                title:"Contactos",
-                icon: Icons.contacts,
-                index: 2,
-                selectedIndex:_selectedIndex,// _selectedIndex
-                onChangeMenu: onChangeMenu//onChangeMenu
-              ),
-              DrawerMenuItemWidget(
                 title:"Información",
                 icon: Icons.info,
-                index: 3,
+                index: 2,
                 selectedIndex:_selectedIndex,// _selectedIndex
                 onChangeMenu: onChangeMenu//onChangeMenu
               ),
